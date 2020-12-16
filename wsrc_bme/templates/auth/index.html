@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1> Welcome </h1>
+{% if g.user %}
+<a href="#"> <h3> Saif</h3></a>
+<a href="{{ url_for('auth.logout')}}"><h3> Logout</h3></a>
+{% else %}
+<a href="{{url_for('auth.register')}}"><h3>Register</h3></a>
+<a href="{{url_for('auth.login')}}"><h3>Login</h3></a>
+{% endif %}
+{% endblock %}
